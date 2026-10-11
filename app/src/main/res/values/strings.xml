@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="detect_desc">Tells HTSR Turbo which app is in front so it can switch game features on and off, and draws the crosshair. It does not read screen content.</string>
+</resources>

@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.htsr.turbo'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.htsr.turbo'
+        minSdk 26
+        targetSdk 28          // avoids foreground-service / receiver-flag rules; runs fine on Android 14
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug   // personal use: debug-signed so it installs directly
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint { abortOnError false }
+}
